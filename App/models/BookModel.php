@@ -40,7 +40,7 @@ require_once 'BaseModel.php';
     //Método para obtener los libros con su autor
     public function Read(){
 
-    $Sql = "SELECT l.titulo, l.genero, l.anio_publicacion, a.nombre_autor, a.apellido_autor 
+        $Sql = "SELECT l.titulo, l.genero, l.anio_publicacion, a.nombre_autor, a.apellido_autor 
             FROM libros l LEFT JOIN autores a ON l.fk_id_autor = a.id_autor 
             ORDER BY l.titulo";
 
@@ -52,6 +52,13 @@ require_once 'BaseModel.php';
 
     }
 
+    //Método para actualizar los datos del libro
+    public function Update(){
+
+        
+
     }
+
+}
 
 ?>

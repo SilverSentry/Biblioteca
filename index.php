@@ -14,7 +14,7 @@
 
         <nav>
             <ul>
-                <li><a href="/db/init.php">Crear base de datos</a></li>
+                <li><a href="db/init.php">Crear base de datos</a></li>
             </ul>
         </nav>
 
@@ -22,8 +22,8 @@
 
         <nav>
             <ul>
-                <li><a href="/db/init.php">Registrarse</a></br></li>
-                <li><a href="/db/init.php">Iniciar sesión</a></br></li>
+                <li><a href="views/User/register.php">Registrarse</a></br></li>
+                <li><a href="views/User/login.php">Iniciar sesión</a></br></li>
             </ul>
         </nav>
     
