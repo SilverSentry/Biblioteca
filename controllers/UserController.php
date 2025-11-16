@@ -20,7 +20,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($User->EmailExists($Email)){
 
-        header("location: ../views/UserAlreadyExists.php");
+        header("location: ../views//UserAlreadyExists.php");
         exit;
 
      }else{
@@ -32,15 +32,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
     if($User->Create()){
 
-        echo "Usuario guardado";
+        echo "Usuario registrado";
 
     } else{
 
-        echo "valio verga 2";
+        echo "El usuario no se registró.";
 
     }
 
 }
+
 }
 
 ?>

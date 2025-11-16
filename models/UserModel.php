@@ -1,5 +1,6 @@
 <?php
 
+//Se crea una clase usuario para controlar los registros
 class User{
 
     private $Conn;
