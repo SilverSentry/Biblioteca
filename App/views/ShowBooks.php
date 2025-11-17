@@ -1,7 +1,7 @@
 <?php
 
-//Se incluye
-require_once '../config/DBConnection.php';
+//Se incluye tanto la conexión como el modelo libro
+require_once '../../config/DBConnection.php';
 require_once '../models/BookModel.php';
 
 $DataBase = new Connection();
@@ -55,13 +55,11 @@ if($Count > 0){
             <td><?php echo htmlspecialchars($Row['titulo']); ?></td>
             <td><?php echo htmlspecialchars($Row['genero']); ?></td>
             <td><?php echo htmlspecialchars($Row['anio_publicacion']); ?></td>
-            <td><?php echo htmlspecialchars($Row['nombre_autor']); ?></td>
-            <td>
-                <button>Editar</button> <button>Eliminar</button> </td>
+            <td><?php echo htmlspecialchars($Row['nombre_autor']). " ". htmlspecialchars($Row['apellido_autor']); ?></td>
+            <td><button>Editar</button> <button>Eliminar</button></td>
         </tr>
-       <?php
-        }
-       ?>
+
+       <?php } ?>
         
     </tbody>
 
@@ -82,7 +80,7 @@ if($Count > 0){
 </p>
 
 <p>
-<a href="../index.php">Volver al inicio</a>
+<a href="../../index.php">Volver al inicio</a>
 </p>
 
 </body>

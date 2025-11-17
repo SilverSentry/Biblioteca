@@ -9,6 +9,7 @@ require_once 'BaseModel.php';
         public $Title;
         public $YearOfPublication;
         public $Gender;
+        public $Author;
 
         private $Conn;
 
@@ -21,11 +22,11 @@ require_once 'BaseModel.php';
     //Método para registrar un nuevo libro
     public function Create(){
 
-        $Sql = "INSERT INTO libros (titulo, anio_publicacion, genero) VALUES (?, ?, ?, ?)";
+        $Sql = "INSERT INTO libros (titulo, genero, anio_publicacion, fk_id_autor) VALUES (?, ?, ?, ?)";
 
         $Stmt = $this->Conn->prepare($Sql);
 
-        if ($Stmt->execute([$this->Title, $this->YearOfPublication, $this->Gender])) {
+        if ($Stmt->execute([$this->Title, $this->YearOfPublication, $this->Gender, $this->Author])) {
    
             return true;
 
@@ -40,11 +41,11 @@ require_once 'BaseModel.php';
     //Método para obtener los libros con su autor
     public function Read(){
 
-    $Sql = "SELECT l.titulo, l.genero, l.anio_publicacion, a.nombre_autor, a.apellido_autor 
+        $Sql = "SELECT l.id_libro, l.titulo, l.genero, l.anio_publicacion, a.nombre_autor, a.apellido_autor 
             FROM libros l LEFT JOIN autores a ON l.fk_id_autor = a.id_autor 
             ORDER BY l.titulo";
 
-        $Stmt = $this->Conn->prepare($Sql);
+        $Stmt = $this->Conn->prepare($Sql); 
 
         $Stmt->execute();
 
@@ -52,6 +53,13 @@ require_once 'BaseModel.php';
 
     }
 
+    //Método para actualizar los datos del libro
+    public function Update(){
+
+        $Sql = "UPDATE";
+
     }
+
+}
 
 ?>

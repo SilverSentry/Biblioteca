@@ -14,7 +14,7 @@
 
         <nav>
             <ul>
-                <li><a href="/db/init.php">Crear base de datos</a></li>
+                <li><a href="db/init.php">Crear base de datos</a></li>
             </ul>
         </nav>
 
@@ -22,8 +22,8 @@
 
         <nav>
             <ul>
-                <li><a href="/db/init.php">Registrarse</a></br></li>
-                <li><a href="/db/init.php">Iniciar sesión</a></br></li>
+                <li><a href="">Registrarse</a></br></li>
+                <li><a href="">Iniciar sesión</a></br></li>
             </ul>
         </nav>
     
@@ -31,9 +31,9 @@
 
         <nav>
             <ul>
-                <li><a href="views/Books.php">Gestión de libros</a></br></li>
-                <li><a href="views/Authors.php">Gestión de autores</a></br></li>
-                <li><a href="views/Loans.php">Préstamos</a></br></li>
+                <li><a href="App/views/ShowBooks.php">Gestión de libros</a></br></li>
+                <li><a href="App/views/ShowAuthors.php">Gestión de autores</a></br></li>
+                <li><a href="App/views/ShowLoans.php">Préstamos</a></br></li>
             </ul>
         </nav>
 

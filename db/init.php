@@ -1,6 +1,7 @@
 <?php
 //Archivo creado para crear la base de datos y sus tablas
 
+//Se incluye la conexión a la base de datos, o al servidor
 require_once '../config/DBConnection.php';
 
 $DataBase = new Connection();

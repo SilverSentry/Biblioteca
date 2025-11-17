@@ -1,7 +1,7 @@
 <?php
 
-require_once("../models/DBConnection.php");
-require_once("../models/User.php");
+require_once '../models/DBConnection.php';
+require_once '../models/User.php';
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
 
